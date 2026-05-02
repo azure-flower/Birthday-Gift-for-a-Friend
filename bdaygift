@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Hafi birfday!1</title>
+		<style>
+			body {
+				background-image: url('mostro_lounge.png');
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center;
+				background-attachment: fixed;
+				background-color: #936CF5;
+				color: #252525;
+				font-family: Georgia;
+				padding: 10px;
+			}
+			.container {
+				display: flex;
+				flex-direction: column;
+				gap: 20px;
+				justify-content: center;
+				align-items: center;
+				min-height: 100vh;
+			}
+			@media (min-width: 768px) {
+				.container {
+					flex-direction: column;
+					justify-content: center;
+				}
+			}
+			.intro-box {
+				background: #5A438C;
+				border-radius: 5px;
+				box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
+				outline: 2px solid #4A2D6B;
+				width: 90%;
+				max-width: 500px;
+				min-height: 250px;
+				box-sizing: border-box;     
+				text-align: center;
+				padding: 20px;
+			}
+			.pre-title {
+				font-style: italic;
+				font-size: 20px;
+				word-wrap: break-word;
+				overflow-wrap: break-word;
+				line-height: 1.6;
+			}
+			.main-title {
+				font-size: 35px;
+				color: #FFCA4F;
+				text-decoration: 2px underline;
+				word-wrap: break-word;
+				overflow-wrap: break-word;
+				line-height: 1.6;
+			}
+			.sub-title {
+				font-size: 25px;
+				word-wrap: break-word;
+				overflow-wrap: break-word;
+				line-height: 1.6;
+			}
+			.abbreviation1 {
+				text-decoration: none;
+				cursor: pointer;
+			}
+			.quizbox {
+				background: #5A438C;
+				border-radius: 10px;
+				outline: 2px solid #4A2D6B;
+				width: 90%;
+				max-width: 500px;
+				min-height: 250px;
+				box-sizing: border-box;
+				text-align: center;
+				padding: 10px;
+			}
+			#quizForm {
+				display: flex;
+				flex-direction: column;
+ 				align-items: center;
+			}
+			input[type="text"] {
+				width: 100%;	
+				padding: 10px;
+				margin: 10px 0;
+				border: 2px solid #4A2D6B;
+				box-sizing: border-box;
+				font-size: 15px;
+			}
+			button {
+				width: 50%;
+				padding: 10px;
+				border: none;
+				cursor: pointer;
+				font-weight: bold;
+				background: #A387E0;
+				color: #5F3E8A;
+				border: 2px solid #5F3E8A;
+				transition: all 0.3s ease-in-out;
+			}
+			button:hover {
+				background: #5F3E8A;
+				color: #A387E0;
+				border: 2px solid #5F3E8A;
+				cursor: pointer;
+			}
+			.text-adjust {
+				font-size: 25px;
+			}
+			.hidden-msg {
+				color: #5A438C;
+				font-size: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="intro-box">
+				<span class="pre-title">"Oh, you poor, unfortunate soul~"</span>
+				<br>
+				<span class="main-title">Happy 15th Birthday!</span>
+				<br>
+				<span class="sub-title"><abbr title="Mammon, Azul, Leviathan, and Vil" class="abbreviation1">MALV</abbr> wishes you to enjoy your special day!</span>
+				<br><br>
+				<span class="pre-title">Though, there is a surprise for you. Solve this puzzle, using morse code to claim your extra gift!</span>
+			</div>
+			<div class="quizbox">
+				<form id="quizForm">
+					<span class="sub-title">.-- .... . -. / .. ... / .- --.. ..- .-.. / .- -. -.. / ...- .. .-.. .----. ... / -... .. .-. - .... -.. .- -.--</span>
+					<br>
+					<label for="userAnswer" class="text-adjust">Type your answer in <strong>letters</strong>, not in morse code!</label>
+					<input type="text" id="userAnswer" placeholder="Enter...">
+					<button type="submit">Submit</button>
+					<span class="hidden-msg">(hint: add the month and days)</span>
+				</form>
+			</div>
+		</div>
+		<script>
+			document.getElementById('quizForm').addEventListener('submit', function(e) {
+  				e.preventDefault();
+  				const answer = document.getElementById('userAnswer').value.trim().toLowerCase();
+  				if (answer === "thirty nine") {
+    					window.location.href = "https://youtu.be/Jie5euZcpDg?si=w2eg7XCl7HKUQnUFm"; 
+  				} else if (answer === "february twenty four") {
+    					alert("There is a hint somewhere else. Try again.");
+  				} else if (answer === "april nine") {
+    					alert("There is a hint somewhere else, I said. Try again, bro.");
+  				} else if (answer === "february twenty four and april nine") {
+    					alert("I WILL FART ON U. TRY AGAIN.");
+  				} else if (answer === "azul and vil") {
+    					window.location.href = "https://youtu.be/zLf8a_goriM?si=ujuqwYDGeAR9gnxb"; // lwk crashing out if u actually wrote this
+  				} else {
+					alert("You got it wrong, buddy. Try again.");
+				}
+			});
+		</script>
+	</body>
+</html>
